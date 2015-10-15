@@ -1086,7 +1086,7 @@
                 }
     
                 // 像filePicker只能独立存在，不能公用。
-                runtime = runtime || cache.get( null, standalone );
+                runtime = runtime || cache.get( this.uid, standalone );
     
                 // 需要创建
                 if ( !runtime ) {
@@ -1156,6 +1156,7 @@
         Mediator.installTo( RuntimeClient.prototype );
         return RuntimeClient;
     });
+    
     /**
      * @fileOverview Blob
      */
